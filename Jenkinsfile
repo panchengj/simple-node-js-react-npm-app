@@ -4,10 +4,11 @@ pipeline {
             image 'node:14-alpine' 
             args '-p 3006:3000' 
         }
-        enviroment{
+    }
+
+    enviroment{ 
                  CI = 'true'
              }
-    }
     stages {
         stage('Build') { 
             steps {
